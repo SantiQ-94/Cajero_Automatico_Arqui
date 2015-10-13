@@ -3,15 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/src/Transacciones/Transaccion.java</file>
-            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/src/Registros/AdministradorTransacciones.java</file>
-            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/src/CajeroAutomatico/Cuenta.java</file>
-            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/src/Transacciones/Deposito.java</file>
-            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/src/Transacciones/Transferencia.java</file>
-            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/test/CajeroAutomatico/CuentaTest.java</file>
-            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/src/Registros/AdministradorRegistroClientes.java</file>
-            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/src/Transacciones/Retiro.java</file>
-            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/test/CajeroAutomatico/AdministradorRegistroClientesTest.java</file>
+            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/Cajero_Automatico_Arqui/src/GUI/LoginNroDeCuenta.java</file>
+            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/Cajero_Automatico_Arqui/src/principal/Main.java</file>
+            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/Cajero_Automatico_Arqui/src/GUI/VistaPrincipal.java</file>
+            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/Cajero_Automatico_Arqui/src/GUI/VistaRetiroRapido.java</file>
+            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/Cajero_Automatico_Arqui/src/GUI/VistaDepostio.java</file>
+            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/Cajero_Automatico_Arqui/src/GUI/VistaRetiro.java</file>
+            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/Cajero_Automatico_Arqui/src/GUI/LoginPin.java</file>
+            <file>file:/D:/disco%20de%2080/unidad3/santiago/NetBeans/Projects/Cajero%20Automatico/Cajero_Automatico_Arqui/src/GUI/VistaCambioDePin.java</file>
         </group>
     </open-files>
 </project-private>

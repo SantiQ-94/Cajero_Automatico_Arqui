@@ -9,26 +9,22 @@ import javax.swing.JTextField;
  *
  * @author FamiliaQuiroga
  */
-public class VentanaLogin extends JFrame{
+public class LoginNroDeCuenta extends JFrame{
     
     private JLabel etiqueta;
     private JTextField campoTexto;
     private JButton boton;
     
-     public VentanaLogin() {
+     public LoginNroDeCuenta() {
          
          
          etiqueta = new JLabel("Nro de Cuenta");
          campoTexto = new JTextField(200);
-         boton = new JButton("Acceptar");
-         
-         
-         
-         
-         
-         boton.setBounds(220,150, 100, 35);
-         campoTexto.setBounds(250,50,200,25);
-         etiqueta.setBounds(150, 50, 90, 25);
+         boton = new JButton("Aceptar");
+       
+         etiqueta.setBounds(50, 30, 90, 20);
+         campoTexto.setBounds(150,30,150,20);
+         boton.setBounds(115,75, 100, 25);
          
          add(boton);
          add(campoTexto);
@@ -38,7 +34,7 @@ public class VentanaLogin extends JFrame{
          
          
          setLayout(null);
-         setSize(550,300);
+         setSize(350,150);
          setLocationRelativeTo(null);
          setDefaultCloseOperation(EXIT_ON_CLOSE);
          setTitle("Bienvenido");
