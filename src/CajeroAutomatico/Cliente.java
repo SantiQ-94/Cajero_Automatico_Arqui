@@ -46,4 +46,8 @@ public class Cliente {
     public void cambiarPin(int pin) {
         this.pin.cambiarPin(pin);
     }
+
+    public boolean validarPin(int pin) {
+        return this.pin.validarPin(pin);
+    }
 }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package GUI;
 
 import javax.swing.JButton;
@@ -33,23 +28,24 @@ public class VistaPrincipal extends JFrame{
         etiqueta = new JLabel("Seleccione la accion que desea realizar");
                         
         add(botonRetiro);
-        botonRetiro.setBounds(10, 10, 80, 25);
-        
         add(botonRetiroRapido);
-        botonRetiroRapido.setBounds(150, 10, 80, 25);
-        
         add(botonDeposito);
-        botonDeposito.setBounds(10, 50, 80, 25);
-        
         add(botonCambioDePin);
-        botonCambioDePin.setBounds(150, 50, 80, 25);
-        
         add(etiqueta);
-        etiqueta.setBounds(5, 5, 300, 20);
+        
+        
+        botonRetiro.setBounds(50, 75, 150, 35);
+        botonRetiroRapido.setBounds(280, 75, 150, 35);
+        
+        botonDeposito.setBounds(50, 150, 150, 35);
+        botonCambioDePin.setBounds(280, 150, 150, 35);
+        
+        etiqueta.setBounds(130, 15, 300, 20);
         
         setSize(500,300);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Cajero Automatico");
+        setResizable(false);
     }
 }

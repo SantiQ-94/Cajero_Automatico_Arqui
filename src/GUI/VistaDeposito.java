@@ -5,19 +5,22 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author FamiliaQuiroga
  */
-public class VistaRetiro extends JFrame {
+public class VistaDeposito extends JFrame{
     
     private JLabel etiqueta1;
     private JTextField campoMonto;
     private JButton botonConfirmar;
     
-    public VistaRetiro(){
+    public VistaDeposito() {
+        
         setLayout(null);
-        etiqueta1 = new JLabel("Introduzca el monto que desea retirar");
+        etiqueta1 = new JLabel("Introduzca el monto que desea depositar");
         campoMonto = new JTextField(250);
         botonConfirmar = new JButton("Aceptar");
         
@@ -33,6 +36,6 @@ public class VistaRetiro extends JFrame {
         setSize(350,200);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setTitle("Retiro");
+        setTitle("Deposito");
     }
 }

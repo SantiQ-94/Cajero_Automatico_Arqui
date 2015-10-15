@@ -14,4 +14,8 @@ public class Pin {
     public void cambiarPin(int pin) {
         this.pin = pin;
     }
+    
+    public boolean validarPin(int pin) {
+        return this.pin == pin;
+    }
 }

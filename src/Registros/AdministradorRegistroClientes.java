@@ -12,22 +12,20 @@ public class AdministradorRegistroClientes {
         registroClientes = new RegistroClientes();
     }
 
-    public void registrarCliente(String nombres, String apellidos) {
-        registroClientes.registrarCliente(nombres, apellidos);
+    public void registrarCliente(String nombres, String apellidos, int nroCuenta) {
+        registroClientes.registrarCliente(nombres, apellidos, nroCuenta);
     }
 
     public boolean existeCliente(int nroDeCuenta) {
-        boolean respuesta;
-        if(registroClientes.contieneCliente(nroDeCuenta))
-            respuesta = true;
-        else { 
-            respuesta = false;
-        }
-        return respuesta;
+        return registroClientes.contieneCliente(nroDeCuenta);
     }
     
     public void cambianPin(int nroDeCuenta, int pin) {
         registroClientes.cambiarPin(nroDeCuenta, pin);
+    }
+
+    public boolean validarAcceso(int nroDeCuenta, int pin) {
+        return registroClientes.validarAcceso(nroDeCuenta, pin);
     }
 
 }

@@ -4,6 +4,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import principal.Cajero;
 
 /**
  *
@@ -14,9 +15,10 @@ public class LoginPin extends JFrame{
     private JLabel etiqueta;
     private JTextField campoTexto;
     private JButton boton;
+    private Cajero cajero;
     
-    public LoginPin() {
-        
+    public LoginPin(Cajero cajero) {
+        this.cajero = cajero;
         setLayout(null);
        
         etiqueta = new JLabel("PIN");
@@ -36,6 +38,7 @@ public class LoginPin extends JFrame{
         setSize(350, 150);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Introduce tu Pin");
+        setResizable(false);
         
     }
 }

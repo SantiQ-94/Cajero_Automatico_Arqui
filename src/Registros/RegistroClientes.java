@@ -1,6 +1,7 @@
 package Registros;
 
 import CajeroAutomatico.Cliente;
+import CajeroAutomatico.NumeroDeCuenta;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,28 +16,24 @@ public class RegistroClientes {
         clientes = new HashMap<>();
     }
 
-    public void registrarCliente(String nombres, String apellidos) {
-        int nroCuenta = generarNumeroDeCuenta();
+    public void registrarCliente(String nombres, String apellidos,int nroCuenta) {
         Cliente cliente = new Cliente(nroCuenta,1010,nombres,apellidos);
         clientes.put(nroCuenta, cliente);
         
     }
 
-    private int generarNumeroDeCuenta() {
-        int num = (int) Math.floor(Math.random()*(1000000-9999999)+9999999);
-        if(clientes.containsKey(num))
-           return generarNumeroDeCuenta();
-        else
-            return num;
-    }
-
     public boolean contieneCliente(int nroDeCuenta) {
-        return clientes.containsKey(nroDeCuenta);
+        return clientes.containsKey((Integer)nroDeCuenta);
     }
     
     public void cambiarPin(int nroDeCuenta, int pin) {
         Cliente clienteAux = clientes.get(nroDeCuenta);
         clienteAux.cambiarPin(pin);
         clientes.put(nroDeCuenta, clienteAux);
+    }
+
+    public boolean validarAcceso(int nroCuenta, int pin) {
+        Cliente clienteAux = clientes.get(nroCuenta);
+        return clienteAux.validarPin(pin);
     }
 }
