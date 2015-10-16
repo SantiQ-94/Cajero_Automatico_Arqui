@@ -1,8 +1,11 @@
 package GUI;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import principal.Cajero;
 
 /**
  *
@@ -18,9 +21,11 @@ public class VistaRetiroRapido extends JFrame{
     private JButton monto4;
     private JButton monto5;
     private JButton otrosMontos;
+    private Cajero cajero;
                             
     
-    public VistaRetiroRapido() {
+    public VistaRetiroRapido(Cajero cajero) {
+        this.cajero = cajero;
         setLayout(null);
         
         etiqueta1 = new JLabel("Seleccione el monto que desea retira");
@@ -59,5 +64,12 @@ public class VistaRetiroRapido extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Retiro Rápido");
        // setResizable(false);
+        
+        otrosMontos.addActionListener( new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cajero.mostrarVistaRetiro();
+            }
+        });
     }
 }

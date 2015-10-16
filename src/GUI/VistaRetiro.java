@@ -4,6 +4,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import principal.Cajero;
 
 /**
  *
@@ -14,9 +15,12 @@ public class VistaRetiro extends JFrame {
     private JLabel etiqueta1;
     private JTextField campoMonto;
     private JButton botonConfirmar;
+    private Cajero cajero;
     
-    public VistaRetiro(){
+    public VistaRetiro(Cajero cajero){
+        this.cajero = cajero;
         setLayout(null);
+        
         etiqueta1 = new JLabel("Introduzca el monto que desea retirar");
         campoMonto = new JTextField(250);
         botonConfirmar = new JButton("Aceptar");
@@ -34,5 +38,7 @@ public class VistaRetiro extends JFrame {
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Retiro");
+        
+        
     }
 }

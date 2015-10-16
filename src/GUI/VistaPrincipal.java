@@ -1,8 +1,11 @@
 package GUI;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import principal.Cajero;
 
 /**
  *
@@ -15,11 +18,12 @@ public class VistaPrincipal extends JFrame{
     private JButton botonDeposito;
     private JButton botonCambioDePin;
     private JLabel etiqueta;
+    private Cajero cajero;
     
     
-    public VistaPrincipal() {
+    public VistaPrincipal(Cajero cajero) {
         setLayout(null);
-        
+        this.cajero = cajero;
         
         botonRetiro = new JButton("Retiro");
         botonRetiroRapido = new JButton("Retiro Rapido");
@@ -47,5 +51,19 @@ public class VistaPrincipal extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Cajero Automatico");
         setResizable(false);
+        
+        botonRetiro.addActionListener( new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cajero.mostrarVistaRetiro();
+            }
+        });
+        
+        botonRetiroRapido.addActionListener( new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cajero.mostrarVistaRetiroRapido();
+            }
+        });
     }
 }

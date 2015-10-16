@@ -1,9 +1,11 @@
 package GUI;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JTextField;
+import javax.swing.JPasswordField;
 import principal.Cajero;
 
 /**
@@ -13,7 +15,7 @@ import principal.Cajero;
 public class LoginPin extends JFrame{
     
     private JLabel etiqueta;
-    private JTextField campoTexto;
+    private JPasswordField campoTexto;
     private JButton boton;
     private Cajero cajero;
     
@@ -22,7 +24,7 @@ public class LoginPin extends JFrame{
         setLayout(null);
        
         etiqueta = new JLabel("PIN");
-        campoTexto = new JTextField(200);
+        campoTexto = new JPasswordField(200);
         boton = new JButton("Aceptar");
         
         
@@ -40,5 +42,30 @@ public class LoginPin extends JFrame{
         setTitle("Introduce tu Pin");
         setResizable(false);
         
+        boton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               char[] password = campoTexto.getPassword();
+               String pinCadena="";
+               for(int i=0; i<password.length; i++) {
+                   pinCadena = pinCadena + password[i];
+               }
+                int pin = convertirANumero(pinCadena);
+                if(cajero.validarPin(pin)) {
+                    cajero.mostrarVistaPrincipal();
+                }
+            }
+        });
+        
+    }
+    
+    private int convertirANumero(String num) {
+        int numero = 0;
+        for(int i=0; i<num.length(); i++) {
+            numero*=10;
+            numero +=(int) num.charAt(i) - 48;
+            
+        }
+        return numero;
     }
 }

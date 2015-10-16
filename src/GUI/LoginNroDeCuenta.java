@@ -49,15 +49,11 @@ public class LoginNroDeCuenta extends JFrame{
         boton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                                                System.out.println("DERP MERP");
                 String aux = campoTexto.getText();
                 int numeroDeCuenta = convertirANumero(aux);
-                                                System.out.println(numeroDeCuenta);
                 if(cajero.validarNroCuenta(numeroDeCuenta)) {
                     cajero.mostrarLoginPin();
                 }
-                else
-                    System.out.println("NOPE");
             }   
             });
     }
