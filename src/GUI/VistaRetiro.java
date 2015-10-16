@@ -1,5 +1,7 @@
 package GUI;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -39,6 +41,25 @@ public class VistaRetiro extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Retiro");
         
-        
+        botonConfirmar.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String montoRetiro = campoMonto.getText();
+                int monto = convertirANumero(montoRetiro);
+                cajero.realizarRetiro(monto);
+                cajero.mostrarVistaPrincipal();
+            }
+        });
+    }
+    
+    private int convertirANumero(String num) {
+        int numero = 0;
+        for(int i=0; i<num.length(); i++) {
+            numero*=10;
+            numero +=(int) num.charAt(i) - 48;
+            
+        }
+        return numero;
     }
 }

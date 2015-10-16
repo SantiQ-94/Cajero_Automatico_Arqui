@@ -31,20 +31,21 @@ public class Cuentas {
         return cuentas.get(cuentaObjetivo).mostrarSaldo();
     }
 
-    void retirar(int montoRetiro, String cuentaObjetivo) {
+    public void retirar(int montoRetiro, String cuentaObjetivo) {
         Cuenta cuentaAux = cuentas.get(cuentaObjetivo);
         cuentaAux.retirar(montoRetiro);
+                                            System.out.println(cuentaAux.mostrarSaldo());
         cuentas.put(cuentaObjetivo, cuentaAux);
         
     }
 
-    void agregarCuentaCorriente() {
+    public void agregarCuentaCorriente() {
         nroCuentasCorrientes++;
         String numeroCuenta = ""+nroCuentasCorrientes;
         cuentas.put("cuentaCorriente"+numeroCuenta, new CuentaCorriente());
     }
 
-    void agregarCuentaDeAhorro() {
+    public void agregarCuentaDeAhorro() {
         nroCuentasDeAhorro++;
         String numeroCuenta = ""+nroCuentasDeAhorro;
         cuentas.put("cuentaDeAhorro"+numeroCuenta, new CuentaDeAhorros());

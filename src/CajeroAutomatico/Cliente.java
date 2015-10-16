@@ -27,15 +27,15 @@ public class Cliente {
        return  cuentas.mostrarSaldo(cuenta);
     }
 
-    void retirar(int montoRetiro, String cuentaObjetivo) {
+    public void retirar(int montoRetiro, String cuentaObjetivo) {
         cuentas.retirar(montoRetiro, cuentaObjetivo);
     }
 
-    void agregarCuentaCorriente() {
+    public void agregarCuentaCorriente() {
         cuentas.agregarCuentaCorriente();
     }
 
-    void agregarCuentaDeAhorros() {
+    public void agregarCuentaDeAhorros() {
         cuentas.agregarCuentaDeAhorro();
     }
 

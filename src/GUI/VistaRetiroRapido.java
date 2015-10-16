@@ -71,5 +71,55 @@ public class VistaRetiroRapido extends JFrame{
                 cajero.mostrarVistaRetiro();
             }
         });
+        
+        monto1.addActionListener( new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cajero.realizarRetiro(convertirANumero(monto1.getText()));
+                cajero.mostrarVistaPrincipal();
+            }
+        });
+        
+        monto2.addActionListener( new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cajero.realizarRetiro(convertirANumero(monto2.getText()));
+                cajero.mostrarVistaPrincipal();
+            }
+        });
+        
+        monto3.addActionListener( new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cajero.realizarRetiro(convertirANumero(monto3.getText()));
+                cajero.mostrarVistaPrincipal();
+            }
+        });
+        
+        monto4.addActionListener( new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cajero.realizarRetiro(convertirANumero(monto4.getText()));
+                cajero.mostrarVistaPrincipal();
+            }
+        });
+        
+        monto5.addActionListener( new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cajero.realizarRetiro(convertirANumero(monto5.getText()));
+                cajero.mostrarVistaPrincipal();
+            }
+        });
+    }
+    
+    private int convertirANumero(String num) {
+        int numero = 0;
+        for(int i=0; i<num.length(); i++) {
+            numero*=10;
+            numero +=(int) num.charAt(i) - 48;
+            
+        }
+        return numero;
     }
 }

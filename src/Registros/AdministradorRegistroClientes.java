@@ -28,4 +28,13 @@ public class AdministradorRegistroClientes {
         return registroClientes.validarAcceso(nroDeCuenta, pin);
     }
 
+    public void realizarRetiro(int numeroDeCuenta, int monto) {
+        
+        registroClientes.realizarRetiro(numeroDeCuenta, monto);
+    }
+    
+    public void realziarDeposito(int nroDeCuenta, int monto) {
+        registroClientes.realizarDeposito(nroDeCuenta, monto);
+    }
+
 }

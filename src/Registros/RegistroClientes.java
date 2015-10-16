@@ -36,4 +36,15 @@ public class RegistroClientes {
         Cliente clienteAux = clientes.get(nroCuenta);
         return clienteAux.validarPin(pin);
     }
+
+    public void realizarRetiro(int numeroDeCuenta, int monto) {
+        Cliente clienteAux = clientes.get(numeroDeCuenta);
+        clienteAux.retirar(monto, "cuentaCorriente1");
+        clientes.put(numeroDeCuenta, clienteAux);
+    }
+    public void realizarDeposito(int numeroDeCuenta, int monto) {
+        Cliente clienteAux = clientes.get(numeroDeCuenta);
+        clienteAux.depositar(monto, "cuentaCorriente1");
+        clientes.put(numeroDeCuenta, clienteAux);
+    }
 }
